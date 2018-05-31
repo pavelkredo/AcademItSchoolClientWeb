@@ -1,77 +1,84 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>IntroHtml</title>
+    <style type="text/css">
+        .block1 {
+            padding-top: 8px;
+        }
+    </style>
 </head>
 <body>
     <form>
-        <label>
-            Имя <input type="text" name="name" />
-        </label>
-        <br />
-        <label>
-            Фамилия <input type="text" name="surname" />
-        </label>
-        <br />
-
-        <label>
-            Отчество <input type="text" name="patronymic" />
-        </label>
-        <br />
-        <br />
-        <label>
-            О себе <textarea maxlength="500" rows="10" cols="50"></textarea>
-        </label>
-        <br />
-        <br />
-        <label>
-            В браке <input type="checkbox" name="marriage" />
-        </label>
-        <br />
+        <div class="block1">
+            <label>
+                Имя <input type="text" name="name" />
+            </label>
+        </div>
+        <div class="block1">
+            <label>
+                Фамилия <input type="text" name="surname" />
+            </label>
+        </div>
+        <div class="block1">
+            <label>
+                Отчество <input type="text" name="patronymic" />
+            </label>
+        </div>
+        <div class="block1">
+            <label>
+                О себе <textarea maxlength="500" rows="10" cols="50"></textarea>
+            </label>
+        </div>
+        <div class="block1">
+            <label>
+                В браке <input type="checkbox" name="marriage" />
+            </label>
+        </div>
         <label>
             Наличие машины <input type="checkbox" name="car" />
         </label>
-        <br />
-        <br />
-        <label>Пол:</label>
-        <br />
+        <div class="block1">
+            <label>Пол:</label>
+        </div>
         <label>
             Мужской <input type="radio" name="sex" />
         </label>
         <label>
             Женский <input type="radio" name="sex" />
         </label>
-        <br />
-        <br />
-        <label>
-            Количество детей
-            <select name="children">
-                <option>Нет</option>
-                <option>Один</option>
-                <option>Два</option>
-                <option>Три и более</option>
-            </select>
-        </label>
-        <br />
-        <br />
-        <label>
-            Любимый цвет
-            <select multiple name="color">
-                <option>Белый</option>
-                <option>Черный</option>
-                <option>Красный</option>
-                <option>Оранжевый</option>
-                <option>Желтый</option>
-                <option>Зеленый</option>
-                <option>Синий</option>
-                <option>Коричневый</option>
-            </select>
-        </label>
-        <br />
-        <br />
-        <input type="submit" value="Отправить" name="send" />
+        <div class="block1">
+            <label>
+                Количество детей
+                <select name="children">
+                    <option>Нет</option>
+                    <option>Один</option>
+                    <option>Два</option>
+                    <option>Три и более</option>
+                </select>
+            </label>
+        </div>
+        <div class="block1">
+            <label>
+                Любимый цвет
+                <select multiple name="color">
+                    <option>Белый</option>
+                    <option>Черный</option>
+                    <option>Красный</option>
+                    <option>Оранжевый</option>
+                    <option>Желтый</option>
+                    <option>Зеленый</option>
+                    <option>Синий</option>
+                    <option>Коричневый</option>
+                </select>
+            </label>
+        </div>
+        <div class="block1">
+            <input type="submit" value="Отправить" name="send" />
+        </div>
     </form>
+    <hr />
+    <a target="_blank" href="HTMLPage2.html">Вторая страница</a>
 </body>
 </html>
