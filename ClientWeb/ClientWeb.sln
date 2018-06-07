@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroHtml", "IntroHtml\IntroHtml.csproj", "{24B57015-A4C4-4AD9-B2FD-BA6A1B4C3C2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gabriel", "Gabriel\Gabriel.csproj", "{3F44FE45-D8B5-4BEB-9B81-9AB1EB387CED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{24B57015-A4C4-4AD9-B2FD-BA6A1B4C3C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24B57015-A4C4-4AD9-B2FD-BA6A1B4C3C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24B57015-A4C4-4AD9-B2FD-BA6A1B4C3C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F44FE45-D8B5-4BEB-9B81-9AB1EB387CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F44FE45-D8B5-4BEB-9B81-9AB1EB387CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F44FE45-D8B5-4BEB-9B81-9AB1EB387CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F44FE45-D8B5-4BEB-9B81-9AB1EB387CED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
