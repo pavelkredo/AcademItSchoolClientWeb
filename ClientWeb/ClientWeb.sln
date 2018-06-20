@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gabriel", "Gabriel\Gabriel.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSExercise1", "JSExercise1\JSExercise1.csproj", "{5FFCEC7F-BAC2-491E-BC7C-BD7EA256787B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadraticEquation", "QuadraticEquation\QuadraticEquation.csproj", "{CAC782E2-B4E5-4AA4-A02D-A5006E0A57CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5FFCEC7F-BAC2-491E-BC7C-BD7EA256787B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FFCEC7F-BAC2-491E-BC7C-BD7EA256787B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FFCEC7F-BAC2-491E-BC7C-BD7EA256787B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC782E2-B4E5-4AA4-A02D-A5006E0A57CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC782E2-B4E5-4AA4-A02D-A5006E0A57CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC782E2-B4E5-4AA4-A02D-A5006E0A57CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC782E2-B4E5-4AA4-A02D-A5006E0A57CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

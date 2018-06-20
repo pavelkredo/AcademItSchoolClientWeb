@@ -1,0 +1,2 @@
+C:\Users\Human\Source\Repos\AcademItSchoolClientWeb\ClientWeb\IntroHtml\obj\Debug\IntroHtml.csprojAssemblyReference.cache
+C:\Users\Human\Source\Repos\AcademItSchoolClientWeb\ClientWeb\IntroHtml\obj\Debug\IntroHtml.csproj.CoreCompileInputs.cache
