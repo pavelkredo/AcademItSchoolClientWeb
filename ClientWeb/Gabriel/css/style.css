@@ -47,6 +47,7 @@ body {
     }
 
 .page-header .disabled a {
+    pointer-events: none;
     text-decoration: none;
     cursor: default;
     opacity: 0.3;
@@ -63,7 +64,7 @@ body {
 
 .validators-table-wrapper {
     overflow-y: auto;
-    max-height: 260px;
+    max-height: 270px;
     padding: 0 10px;
 }
 
@@ -112,6 +113,11 @@ body {
 
         .validators-table .comment-col input {
             width: 100%;
+            height: 20px;
+            border-color: #CBCBCB;
+            border-width: 1px;
+            text-indent: 10px;
+            font-size: 11px;
         }
 
 /* End of validators table */
@@ -119,6 +125,7 @@ body {
 /* Buttons panel */
 
 .buttons-panel {
+    margin-top: 31px;
     padding: 0 20px;
 }
 
@@ -137,7 +144,7 @@ body {
 }
 
 .button {
-    width: 175px;
+    width: 173px;
     height: 42px;
     background: linear-gradient(to bottom, #90BC3A, #7CA92F);
     border: 1px solid #6A8F2B;
@@ -148,6 +155,7 @@ body {
 }
 
     .button.button-white {
+        margin-left: 8px;
         background: linear-gradient(to bottom, #FDFDFD, #C8C8C8);
         color: #939393;
         border: 1px solid #C1C1C1;
@@ -156,9 +164,11 @@ body {
     .button:hover {
         opacity: 0.8;
     }
+
 /* End of buttons panel */
 
 /* Previous requests table header */
+
 .requests-table-header {
     margin-top: 35px;
     line-height: 40px;
@@ -244,9 +254,6 @@ body {
 
     .request-table .system {
         width: 15%;
-    }
-
-    .request-table .ordered {
     }
 
         .request-table .ordered .garbage-icon {
