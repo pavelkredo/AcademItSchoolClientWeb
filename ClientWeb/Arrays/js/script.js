@@ -4,25 +4,23 @@ list.sort(function (e1, e2) {
     return e2 - e1;
 });
 
-alert(list);
+console.log(list);
 
 var list1 = list.slice(0, 5);
-var list2 = list.slice(list.length - 5, list.length);
+var list2 = list.slice(list.length - 5);
 
-alert(list1);
-alert(list2);
+console.log(list1);
+console.log(list2);
 
 var filteredList = list.filter(function (e) {
     return e % 2 === 0;
 });
 
-var sum = 0;
+var result = filteredList.reduce(function(sum, current) {
+    return sum + current;
+});
 
-for (var i = 0; i < filteredList.length; i++) {
-    sum += filteredList[i];
-}
-
-alert(sum);
+console.log(result);
 
 var hundredList = [];
 
@@ -34,10 +32,8 @@ var evenNumbers = hundredList.filter(function (e) {
     return e % 2 === 0;
 });
 
-var squaresOfNumbers = [];
+var squaresOfNumbers = evenNumbers.map(function(num) {
+    return Math.pow(num, 2);
+});
 
-for (var i = 0; i < evenNumbers.length; i++) {
-    squaresOfNumbers.push(Math.pow(evenNumbers[i], 2));
-}
-
-alert(squaresOfNumbers);
+console.log(squaresOfNumbers);
