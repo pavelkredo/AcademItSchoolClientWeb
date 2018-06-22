@@ -116,6 +116,7 @@ body {
             height: 20px;
             border-color: #CBCBCB;
             border-width: 1px;
+            border-style: solid;
             text-indent: 10px;
             font-size: 11px;
         }
