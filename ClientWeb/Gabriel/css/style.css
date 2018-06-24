@@ -114,9 +114,7 @@ body {
         .validators-table .comment-col input {
             width: 100%;
             height: 20px;
-            border-color: #CBCBCB;
-            border-width: 1px;
-            border-style: solid;
+            border: 1px solid #CBCBCB;
             text-indent: 10px;
             font-size: 11px;
         }
