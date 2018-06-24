@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="css\style.css" />
     <Content Include="html\page.html" />
     <Content Include="js\script.js" />
   </ItemGroup>
