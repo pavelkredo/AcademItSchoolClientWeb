@@ -1,42 +1,38 @@
-﻿var onclick = document.body.querySelector(".onclick");
-var textbox = document.body.querySelector(".addtext");
-var number = 0;
-var deleteButtons = [];
+﻿document.addEventListener("DOMContentLoaded",
+    function() {
+        var onclick = document.body.querySelector(".onclick");
+        var textbox = document.body.querySelector(".addtext");
 
-onclick.addEventListener("click", enterResult, false);
+        onclick.addEventListener("click", enterResult, false);
 
-function enterResult() {
-    var text = textbox.value;
+        function enterResult() {
+            var text = textbox.value;
 
-    textbox.value = null;
+            if (text !== "") {
+                textbox.value = null;
 
-    var note = document.createElement("label");
-    note.innerText = text;
+                var note = document.createElement("li");
+                note.innerText = text;
 
-    var div = document.createElement("div");
-    div.className = "row" + number;
-    div.appendChild(note);
+                var ul = document.createElement("ul");
+                ul.appendChild(note);
 
-    var deleteButton = document.createElement("input");
-    deleteButton.type = "button";
-    deleteButton.className = "deleteButton";
-    deleteButton.value = "Удалить";
+                var deleteButton = document.createElement("input");
+                deleteButton.type = "button";
+                deleteButton.className = "deleteButton";
+                deleteButton.value = "Удалить";
 
-    div.appendChild(deleteButton);
+                ul.appendChild(deleteButton);
 
-    document.body.appendChild(div);
+                document.body.appendChild(ul);
 
-    deleteButtons = document.body.querySelectorAll(".deleteButton");
+                deleteButton.addEventListener("click", deleteButtonsFunc(ul), false);
+            }
+        }
 
-    deleteButtons[number].addEventListener("click", deleteButtonsFunc(number), false);
-
-    number++;
-}
-
-function deleteButtonsFunc(i) {
-    return function () {
-        var del = document.body.querySelector(".row" + i);
-        del.remove();
-        number--;
-    }
-}
+        function deleteButtonsFunc(ul) {
+            return function() {
+                ul.remove();
+            }
+        }
+    });
