@@ -1,10 +1,15 @@
 ﻿$(function () {
     var i = 1;
 
-    $(".add-button").click(function(e) {
+    $(".add-button").click(function (e) {
         var secondName = $(".add-second-name").val();
         var firstName = $(".add-first-name").val();
         var number = $(".add-phone-number").val();
+
+        if (secondName === "") {
+            $(".add-second-name").val("Введите фамилию");
+            return;
+        }
 
         var row = $("<tr></tr>")
             .append("<td>" + i + "</td>")
