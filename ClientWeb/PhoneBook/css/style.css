@@ -1,3 +1,24 @@
-﻿body
-{
+﻿thead {
+    background-color: #4F81BD;
+    color: white;
+}
+
+tbody {
+    background-color: #D0D8E8;
+}
+
+.number {
+    width: 10%;
+}
+
+.second-name {
+    width: 30%;
+}
+
+.first-name {
+    width: 25%;
+}
+
+.phone-number {
+    width: 35%;
 }
