@@ -22,3 +22,7 @@ tbody {
 .phone-number {
     width: 35%;
 }
+
+.warning {
+    border: 2px solid red;
+}

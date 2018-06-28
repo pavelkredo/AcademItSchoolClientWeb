@@ -1,13 +1,63 @@
 ﻿$(function () {
     var i = 1;
 
-    $(".add-button").click(function (e) {
-        var secondName = $(".add-second-name").val();
-        var firstName = $(".add-first-name").val();
-        var number = $(".add-phone-number").val();
+    var secondNameVar = $(".add-second-name");
+    var firstNameVar = $(".add-first-name");
+    var numberVar = $(".add-phone-number");
 
-        if (secondName === "") {
-            $(".add-second-name").val("Введите фамилию");
+    secondNameVar.focus(function (e) {
+        secondNameVar.removeClass("warning");
+        secondNameVar.val("");
+    });
+
+    secondNameVar.blur(function(e) {
+        if (secondNameVar.val() === "") {
+            secondNameVar.val("Фамилия");
+        }
+    });
+
+    firstNameVar.focus(function (e) {
+        firstNameVar.removeClass("warning");
+        firstNameVar.val("");
+    });
+
+    firstNameVar.blur(function (e) {
+        if (firstNameVar.val() === "") {
+            firstNameVar.val("Имя");
+        }
+    });
+
+    numberVar.focus(function (e) {
+        numberVar.removeClass("warning");
+        numberVar.val("");
+    });
+
+    numberVar.blur(function (e) {
+        if (numberVar.val() === "") {
+            numberVar.val("Номер");
+        }
+    });
+
+    $(".add-button").click(function (e) {
+        var secondName = secondNameVar.val();
+        var firstName = firstNameVar.val();
+        var number = numberVar.val();
+
+        if (secondName === "" || secondName === "Фамилия" || secondName === "Введите фамилию") {
+            secondNameVar.addClass("warning");
+            secondNameVar.val("Введите фамилию");
+            return;
+        }
+
+        if (firstName === "" || firstName === "Имя" || firstName === "Введите имя") {
+            firstNameVar.addClass("warning");
+            firstNameVar.val("Введите имя");
+            return;
+        }
+
+        if (number === "" || number === "Номер" || number === "Введите номер") {
+            numberVar.addClass("warning");
+            numberVar.val("Введите номер");
             return;
         }
 
