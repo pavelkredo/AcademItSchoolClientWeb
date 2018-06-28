@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32F6A865-00C4-4350-B5F9-FEB64B52BE3A}</ProjectGuid>
+    <ProjectGuid>{C908C89E-C5DC-45B4-849E-A447FC51D56C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PhoneBook</RootNamespace>
-    <AssemblyName>PhoneBook</AssemblyName>
+    <RootNamespace>ComplicatedPhoneBook</RootNamespace>
+    <AssemblyName>ComplicatedPhoneBook</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,12 +47,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="html\" />
+    <Folder Include="js\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="css\normalize.css" />
-    <Content Include="css\style.css" />
-    <Content Include="html\page.html" />
-    <Content Include="js\script.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

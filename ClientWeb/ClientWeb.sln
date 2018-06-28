@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todoList", "todoList\todoLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook", "PhoneBook\PhoneBook.csproj", "{32F6A865-00C4-4350-B5F9-FEB64B52BE3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplicatedPhoneBook", "ComplicatedPhoneBook\ComplicatedPhoneBook.csproj", "{C908C89E-C5DC-45B4-849E-A447FC51D56C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{32F6A865-00C4-4350-B5F9-FEB64B52BE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32F6A865-00C4-4350-B5F9-FEB64B52BE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32F6A865-00C4-4350-B5F9-FEB64B52BE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C908C89E-C5DC-45B4-849E-A447FC51D56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C908C89E-C5DC-45B4-849E-A447FC51D56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C908C89E-C5DC-45B4-849E-A447FC51D56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C908C89E-C5DC-45B4-849E-A447FC51D56C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
