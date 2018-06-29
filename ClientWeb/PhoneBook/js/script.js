@@ -6,18 +6,24 @@
     var numberVar = $(".add-phone-number");
 
     secondNameVar.focus(function () {
-        secondNameVar.removeClass("warning");
-        secondNameVar.val("");
+        if (secondNameVar.val() === "Введите фамилию!") {
+            secondNameVar.removeClass("warning");
+            secondNameVar.val("");
+        }
     });
 
     firstNameVar.focus(function () {
-        firstNameVar.removeClass("warning");
-        firstNameVar.val("");
+        if (firstNameVar.val() === "Введите имя!") {
+            firstNameVar.removeClass("warning");
+            firstNameVar.val("");
+        }
     });
 
     numberVar.focus(function () {
-        numberVar.removeClass("warning");
-        numberVar.val("");
+        if (numberVar.val() === "Введите номер!") {
+            numberVar.removeClass("warning");
+            numberVar.val("");
+        }
     });
 
     $(".add-button").click(function () {
@@ -61,10 +67,13 @@
 
         $(".first-table").append(row);
 
+        secondNameVar.val("");
+        firstNameVar.val("");
+        numberVar.val("");
+
         $(".delete-button").click(function() {
             $(this).closest("tr").remove();
         });
-
         i++;
     });
 });
