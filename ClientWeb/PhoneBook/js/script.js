@@ -43,11 +43,20 @@
             return;
         }
 
+        var secondNameColumn = $("<td></td>");
+        secondNameColumn.text(secondName);
+
+        var firstNameColumn = $("<td></td>");
+        firstNameColumn.text(firstName);
+
+        var numberColumn = $("<td></td>");;
+        numberColumn.text(number);
+
         var row = $("<tr></tr>")
             .append("<td>" + i + "</td>")
-            .append("<td>" + secondName + "</td>")
-            .append("<td>" + firstName + "</td>")
-            .append("<td>" + number + "</td>")
+            .append(secondNameColumn)
+            .append(firstNameColumn)
+            .append(numberColumn)
             .append("<td><input type=\"button\" class=\"delete-button\" value=\"Удалить\"</td>");
 
         $(".first-table").append(row);
