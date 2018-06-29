@@ -47,12 +47,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="html\" />
-    <Folder Include="js\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="css\normalize.css" />
+    <Content Include="css\style.css" />
+    <Content Include="html\page.html" />
+    <Content Include="js\script.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
