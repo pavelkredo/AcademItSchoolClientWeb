@@ -1,11 +1,42 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Усложненная телефонная книга</title>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body>
+    <div class="data">
+        <form>
+            <input type="text" v-model="lastName" v-bind:class="{ warning: isWarningLastName }" class="add-second-name" placeholder="Фамилия" />
+            <input type="text" v-model="firstName" v-bind:class="{ warning: isWarningFirstName }" class="add-first-name" placeholder="Имя" />
+            <input type="text" v-model="number" v-bind:class="{ warning: isWarningNumber }" class="add-phone-number" placeholder="Номер" />
+            <input type="button" v-on:click="addData" value="Добавить" />
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th class="number">№</th>
+                    <th class="second-name">Фамилия</th>
+                    <th class="first-name">Имя</th>
+                    <th class="phone-number">Номер телефона</th>
+                    <th class="delete-button"></th>
+                </tr>
+            </thead>
+            <tbody class="first-table" v-show="isShowing" style="display: none">
+                <tr v-for="(contact, index) in contacts">
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ contact.lastName }}</td>
+                    <td>{{ contact.firstName }}</td>
+                    <td>{{ contact.number }}</td>
+                    <td><button v-on:click="deleteData(index)">Удалить</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
