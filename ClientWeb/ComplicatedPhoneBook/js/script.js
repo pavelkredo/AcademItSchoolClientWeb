@@ -1,4 +1,8 @@
-﻿var vm = new Vue({
+﻿Vue.component('modal', {
+    template: '#modal-template'
+});
+
+var vm = new Vue({
     el: ".data",
     data: {
         lastName: "",
@@ -19,7 +23,9 @@
                     lastName: this.lastName,
                     firstName: this.firstName,
                     number: this.number,
-                    deleteButton: this.deleteButton
+                    deleteButton: this.deleteButton,
+
+                    showModal: false
                 });
             } else {
                 if (this.lastName === "" || this.lastName === "Введите фамилию!") {
@@ -41,10 +47,26 @@
                 }
             }
 
+            this.lastName = "";
+            this.firstName = "";
+            this.number = "";
+
             this.isShowing = true;
         },
-        deleteData: function(index) {
+        deleteData: function (index) {
             this.contacts.splice(index, 1);
+        },
+        textboxClicked: function () {
+            if (this.lastName === "Введите фамилию!") {
+                this.lastName = "";
+                this.isWarningLastName = false;
+            } else if (this.firstName === "Введите имя!") {
+                this.firstName = "";
+                this.isWarningFirstName = false;
+            } else if (this.number === "Введите номер!") {
+                this.number = "";
+                this.isWarningNumber = false;
+            }
         }
     }
 });

@@ -8,10 +8,36 @@
 </head>
 <body>
     <div class="data">
+        <script type="text/x-template" id="modal-template">
+            <transition name="modal">
+                <div class="modal-mask">
+                    <div class="modal-wrapper">
+                        <div class="modal-container">
+                            <div class="modal-header">
+                                <slot name="header">
+                                    Подтверждение удаления
+                                </slot>
+                            </div>
+                            <div class="modal-body">
+                                <slot name="body">
+                                    <button class="modal-yes-button" @click="$emit('ok')">
+                                        Да
+                                    </button>
+                                    <button class="modal-no-button" @click="$emit('close')">
+                                        Нет
+                                    </button>
+                                </slot>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </transition>
+        </script>
+
         <form>
-            <input type="text" v-model="lastName" v-bind:class="{ warning: isWarningLastName }" class="add-second-name" placeholder="Фамилия" />
-            <input type="text" v-model="firstName" v-bind:class="{ warning: isWarningFirstName }" class="add-first-name" placeholder="Имя" />
-            <input type="text" v-model="number" v-bind:class="{ warning: isWarningNumber }" class="add-phone-number" placeholder="Номер" />
+            <input type="text" v-model="lastName" v-bind:class="{ warning: isWarningLastName }" v-on:click="textboxClicked" placeholder="Фамилия" />
+            <input type="text" v-model="firstName" v-bind:class="{ warning: isWarningFirstName }" v-on:click="textboxClicked" placeholder="Имя" />
+            <input type="text" v-model="number" v-bind:class="{ warning: isWarningNumber }" v-on:click="textboxClicked" placeholder="Номер" />
             <input type="button" v-on:click="addData" value="Добавить" />
         </form>
         <table>
@@ -21,22 +47,28 @@
                     <th class="second-name">Фамилия</th>
                     <th class="first-name">Имя</th>
                     <th class="phone-number">Номер телефона</th>
-                    <th class="delete-button"></th>
+                    <th></th>
                 </tr>
             </thead>
-            <tbody class="first-table" v-show="isShowing" style="display: none">
+            <tbody v-show="isShowing" style="display: none">
                 <tr v-for="(contact, index) in contacts">
                     <td>{{ index + 1 }}</td>
                     <td>{{ contact.lastName }}</td>
                     <td>{{ contact.firstName }}</td>
                     <td>{{ contact.number }}</td>
-                    <td><button v-on:click="deleteData(index)">Удалить</button></td>
+                    <td>
+                        <button id="show-modal" @click="contact.showModal = true">Удалить</button>
+                        <modal v-if="contact.showModal" @ok="deleteData(index)" @close="contact.showModal = false">
+                            <h3 slot="header">Удалить контакт?</h3>
+                        </modal>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script src="../node_modules/vuejs-dialog/dist/vuejs-dialog.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
