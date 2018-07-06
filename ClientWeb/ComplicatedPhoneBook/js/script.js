@@ -9,7 +9,9 @@ var vm = new Vue({
         firstName: "",
         number: "",
         contacts: [],
+        checkedContacts: [],
         isShowing: false,
+        isContactWarningShowing: false,
         isWarningLastName: false,
         isWarningFirstName: false,
         isWarningNumber: false
@@ -19,6 +21,11 @@ var vm = new Vue({
             if (this.lastName !== "" && this.lastName !== "Введите фамилию!"
                 && this.firstName !== "" && this.firstName !== "Введите имя!"
                 && this.number !== "" && this.number !== "Введите номер!") {
+                if (this.contacts.some(elem => elem.number === this.number)) {
+                    this.isContactWarningShowing = true;
+                    return;
+                }
+
                 this.contacts.push({
                     lastName: this.lastName,
                     firstName: this.firstName,
@@ -57,6 +64,8 @@ var vm = new Vue({
             this.contacts.splice(index, 1);
         },
         textboxClicked: function () {
+            this.isContactWarningShowing = false;
+
             if (this.lastName === "Введите фамилию!") {
                 this.lastName = "";
                 this.isWarningLastName = false;
@@ -67,6 +76,11 @@ var vm = new Vue({
                 this.number = "";
                 this.isWarningNumber = false;
             }
+        },
+        removeChecked: function () {
+            this.checkedContacts(function (item, i, checkedContacts) {
+                deleteData(item.index);
+            })
         }
     }
 });

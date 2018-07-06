@@ -39,10 +39,13 @@
             <input type="text" v-model="firstName" v-bind:class="{ warning: isWarningFirstName }" v-on:click="textboxClicked" placeholder="Имя" />
             <input type="text" v-model="number" v-bind:class="{ warning: isWarningNumber }" v-on:click="textboxClicked" placeholder="Номер" />
             <input type="button" v-on:click="addData" value="Добавить" />
+            <input type="button" class="removeChecked" v-on:click="removeChecked" value="Удалить выбранные" />
         </form>
+        <label class="sameContactWarning" v-show="isContactWarningShowing" style="display: none">Контакт с таким номером уже есть в телефонной книге!</label>
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th class="number">№</th>
                     <th class="second-name">Фамилия</th>
                     <th class="first-name">Имя</th>
@@ -52,6 +55,7 @@
             </thead>
             <tbody v-show="isShowing" style="display: none">
                 <tr v-for="(contact, index) in contacts">
+                    <td><input type="checkbox" :id="index" :value="contact.number" v-model="checkedContacts" /></td>
                     <td>{{ index + 1 }}</td>
                     <td>{{ contact.lastName }}</td>
                     <td>{{ contact.firstName }}</td>

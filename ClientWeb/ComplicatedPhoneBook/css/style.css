@@ -90,3 +90,11 @@ tbody {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+.sameContactWarning {
+    color: #C41E3A;
+}
+
+.removeChecked {
+    float: right;
+}
